@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<title>Estacionamento</title>
+
+</h:head>
+
+<h:body>
+
+	<p>Teste Dessa merda</p>
+	<p:dataTable var="spot" value="#{spotView.spot}" rows="10"
+		paginator="true"
+		paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}">
+
+		<p:column headerText="Vaga">
+			<div align="center">
+				<h:outputText value="#{spot.id}" />
+			</div>
+		</p:column>
+
+		<p:column headerText="Situação">
+			<div align="center">
+				<h:outputText value="#{spot.situacao}" />
+			</div>
+		</p:column>
+
+		<p:column headerText="Motorista">
+			<div align="center">
+				<h:outputText value="#{spot.motorista}" />
+			</div>
+		</p:column>
+
+		<p:column headerText="Tipo">
+			<div align="center">
+				<h:outputText value="#{spot.tipo}" />
+			</div>
+		</p:column>
+	</p:dataTable>
+</h:body>
+</html>
